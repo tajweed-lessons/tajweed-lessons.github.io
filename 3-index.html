@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idghaam: the merging rule</title>
+<meta name="description" content="A tajweed lesson on idghaam: when a quiet noon or tanween melts into the next letter. With Quran examples and a short practice set.">
+<style>
+@font-face {
+  font-family: 'Amiri Quran';
+  src: url('./AmiriQuran-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+:root {
+  --cream: #faf6ec;
+  --cream-2: #f3ecda;
+  --olive: #6c7a52;
+  --olive-deep: #4d5a3a;
+  --gold: #b8912f;
+  --gold-soft: #e8d9ae;
+  --ink: #2e2a24;
+  --ink-2: #585254;
+  --hairline: #eae9ea;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #fff; color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px; line-height: 26px;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 40px 20px 56px; }
+h1 {
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+  font-size: 30px; line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 6px;
+}
+@media (min-width: 768px) { h1 { font-size: 38px; } .page { padding: 56px 32px 72px; } }
+.eyebrow { color: var(--ink-2); font-size: 13px; margin: 0 0 18px; }
+.intro { margin: 0 0 28px; }
+h2 {
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+  font-size: 22px; line-height: 1.3; margin: 0 0 10px;
+}
+.label { color: var(--ink-2); font-size: 12px; letter-spacing: 0.04em; margin: 34px 0 4px; }
+p { margin: 0 0 14px; }
+.ar { font-family: 'Amiri Quran', 'Noto Naskh Arabic', 'Traditional Arabic', serif; direction: rtl; }
+.hero {
+  background: var(--cream); border: 1px solid var(--gold-soft);
+  border-radius: 20px; padding: 28px 24px 22px; text-align: center; margin-bottom: 8px;
+}
+.hero .ar.big { font-size: 58px; line-height: 1.6; color: var(--olive-deep); display: block; }
+.orn { color: var(--gold); margin: 6px auto 10px; display: block; }
+.legend { font-size: 12px; line-height: 20px; color: var(--ink-2); margin: 8px 0 0; }
+.noon { color: var(--gold); font-weight: 600; }
+.target { color: var(--olive); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 14px 0 6px; }
+.chip {
+  font-family: 'Amiri Quran', 'Noto Naskh Arabic', serif;
+  font-size: 32px; line-height: 1.4; min-width: 58px; padding: 4px 10px 8px; text-align: center;
+  background: var(--cream); border: 1px solid var(--gold-soft); border-radius: 14px;
+}
+.chip small { display: block; font-size: 12px; color: var(--ink-2); font-family: inherit; }
+.example {
+  background: var(--cream); border: 1px solid var(--gold-soft); border-radius: 16px;
+  padding: 18px 20px 14px; margin: 12px 0; text-align: center;
+}
+.example .ar { font-size: 34px; line-height: 2; display: block; }
+.example .note { font-size: 13px; line-height: 20px; color: var(--ink-2); margin-top: 4px; }
+.example .src { font-size: 12px; color: var(--ink-2); margin-top: 6px; }
+.check { border-inline-start: 3px solid var(--olive); padding: 2px 0 2px 14px; margin: 16px 0; }
+[dir="ltr"] .check, .check { border-inline-start: 3px solid var(--olive); padding-inline-start: 14px; }
+.check b { display: block; margin-bottom: 2px; }
+.practice { display: grid; gap: 12px; margin-top: 12px; }
+@media (min-width: 700px) { .practice { grid-template-columns: 1fr 1fr; } }
+.quiz {
+  background: var(--cream); border: 1px solid var(--gold-soft); border-radius: 16px;
+  padding: 16px 18px 14px; text-align: center;
+}
+.quiz .ar { font-size: 30px; line-height: 1.9; display: block; }
+.quiz .q { font-size: 13px; color: var(--ink-2); margin: 2px 0 10px; }
+.quiz button {
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--olive-deep); background: #fff;
+  border: 1px solid var(--gold-soft); border-radius: 8px; padding: 8px 16px; min-height: 38px; cursor: pointer;
+}
+.quiz .answer { display: none; margin-top: 10px; font-size: 13px; line-height: 20px; }
+.quiz.open .answer { display: block; }
+.quiz .answer b { color: var(--olive-deep); }
+.caption { font-size: 12px; color: var(--ink-2); margin-top: 12px; }
+.closing { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--hairline); color: var(--ink-2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>Idghaam: the merging rule</h1>
+<p class="eyebrow">Tajweed lesson &middot; <span class="ar" dir="rtl">الإدغام</span></p>
+<p class="intro">When a quiet noon (نْ) or a tanween ending meets one of six letters, its sound melts into the next letter. This page shows the two kinds of idghaam, with examples from the Quran and a short practice set.</p>
+
+<div class="hero">
+  <span class="ar big">الإِدْغَام</span>
+  <svg class="orn" width="120" height="18" viewBox="0 0 120 18" fill="none" aria-hidden="true">
+    <line x1="0" y1="9" x2="44" y2="9" stroke="currentColor" stroke-width="1"/>
+    <line x1="76" y1="9" x2="120" y2="9" stroke="currentColor" stroke-width="1"/>
+    <rect x="54" y="3" width="12" height="12" transform="rotate(45 60 9)" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="60" cy="9" r="2" fill="currentColor"/>
+  </svg>
+  <p style="margin:0">Idghaam means merging. Instead of saying the noon clearly, you let it flow into the letter that follows, so the two sounds become one.</p>
+  <p class="legend">In the examples below, the <b class="noon">gold letter</b> is the noon or tanween that disappears, and the <b class="target">olive letter</b> is the one it melts into.</p>
+</div>
+
+<p class="label">The six letters</p>
+<h2>Every idghaam letter is in <span class="ar" dir="rtl">يرملون</span></h2>
+<p>Idghaam happens only before the six letters gathered in the word يَرْمَلُون. Those six letters split into two groups, and each group has its own sound.</p>
+<div class="chips" dir="rtl">
+  <span class="chip">ي<small>yaa</small></span>
+  <span class="chip">ر<small>raa</small></span>
+  <span class="chip">م<small>meem</small></span>
+  <span class="chip">ل<small>laam</small></span>
+  <span class="chip">و<small>waw</small></span>
+  <span class="chip">ن<small>noon</small></span>
+</div>
+
+<p class="label">The first kind</p>
+<h2>Idghaam with ghunnah &middot; <span class="ar" dir="rtl">إدغام بغنة</span></h2>
+<p>Before <b class="ar" dir="rtl" style="font-size:20px">ي، ن، م، و</b> (gathered in the word يَنْمُو), the noon melts in and leaves behind a gentle nasal hum called ghunnah. Hold the hum for about two counts.</p>
+
+<div class="example"><span class="ar">كِتَاب<span class="noon">ٌ </span><span class="target">مُّ</span>بِينٌ</span><div class="note">With ghunnah &middot; tanween melts into meem, keep the hum</div><div class="src">Surah Al-Ma'idah 5:15</div></div>
+<div class="example"><span class="ar">مَ<span class="noon">نْ </span><span class="target">يَ</span>عْمَلْ سُوءًا</span><div class="note">With ghunnah &middot; noon melts into yaa, keep the hum</div><div class="src">Surah An-Nisa 4:123</div></div>
+<div class="example"><span class="ar">مِ<span class="noon">نْ </span><span class="target">وَ</span>رَائِهِ جَهَنَّمُ</span><div class="note">With ghunnah &middot; noon melts into waw, keep the hum</div><div class="src">Surah Ibrahim 14:16</div></div>
+<div class="example"><span class="ar">خَلَقَكُم مِّ<span class="noon">نْ </span><span class="target">نَّ</span>فْسٍ وَاحِدَةٍ</span><div class="note">With ghunnah &middot; noon melts into noon, keep the hum</div><div class="src">Surah An-Nisa 4:1</div></div>
+
+<p class="label">The second kind</p>
+<h2>Idghaam without ghunnah &middot; <span class="ar" dir="rtl">إدغام بغير غنة</span></h2>
+<p>Before <b class="ar" dir="rtl" style="font-size:20px">ل</b> and <b class="ar" dir="rtl" style="font-size:20px">ر</b> the noon disappears completely into the letter. There is no hum at all, just one clean, merged sound.</p>
+
+<div class="example"><span class="ar">أُولَٰئِكَ عَلَىٰ هُدًى مِ<span class="noon">نْ </span><span class="target">رَّ</span>بِّهِمْ</span><div class="note">Without ghunnah &middot; noon melts fully into raa, no hum</div><div class="src">Surah Al-Baqarah 2:5</div></div>
+<div class="example"><span class="ar">فَمَ<span class="noon">نْ </span><span class="target">لَّ</span>مْ يَجِدْ</span><div class="note">Without ghunnah &middot; noon melts fully into laam, no hum</div><div class="src">Surah An-Nisa 4:92</div></div>
+
+<div class="check"><b>A small check</b>If you feel a buzz in your nose while merging, you are doing idghaam with ghunnah. Before ل and ر there should be no buzz at all.</div>
+
+<p class="label">Try it yourself</p>
+<h2>Practice</h2>
+<p>Say each word out loud, decide the kind of idghaam, then check your answer.</p>
+<div class="practice">
+  <div class="quiz"><span class="ar">غَفُورٌ رَّحِيمٌ</span><div class="q">Which kind of idghaam is this?</div><button type="button">Show answer</button><div class="answer"><b>Without ghunnah.</b> The tanween melts into raa completely, with no nasal hum.</div></div>
+  <div class="quiz"><span class="ar">مِنْ مَّالٍ</span><div class="q">Which kind of idghaam is this?</div><button type="button">Show answer</button><div class="answer"><b>With ghunnah.</b> Meem is one of the يَنْمُو letters, so the noon melts in with a hum.</div></div>
+  <div class="quiz"><span class="ar">مَنْ يُؤْمِنُ</span><div class="q">Which kind of idghaam is this?</div><button type="button">Show answer</button><div class="answer"><b>With ghunnah.</b> Yaa takes the noon's sound and keeps the hum for two counts.</div></div>
+  <div class="quiz"><span class="ar">مِنْ لَّيْلٍ</span><div class="q">Which kind of idghaam is this?</div><button type="button">Show answer</button><div class="answer"><b>Without ghunnah.</b> Laam pulls the noon in fully, with no hum at all.</div></div>
+</div>
+<p class="caption">Read each example slowly first, then at your normal recitation speed.</p>
+
+<p class="closing">A free tajweed lesson on idghaam, made to be shared with anyone learning to read the Quran.</p>
+
+</div>
+<script>
+document.querySelectorAll('.quiz button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card = btn.closest('.quiz');
+    var open = card.classList.toggle('open');
+    btn.textContent = open ? 'Hide answer' : 'Show answer';
+  });
+});
+</script>
+</body>
+</html>
